@@ -1,0 +1,9 @@
+.adbar {
+    display: flex;
+    justify-content: flex-end;
+    background: var(--secondary-high);
+    padding: .5em 0;
+    button {
+      margin: .25em;
+    }
+  }
