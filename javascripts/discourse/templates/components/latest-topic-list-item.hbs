@@ -25,8 +25,15 @@
   </div>
 </div>
 <div class="topic-stats">
-  <div class="num views {{topic.viewsHeat}}">{{number topic.views numberKey="views_long"}}</div>
-  <div class="topic-last-activity">
+  {{#each homepageTopicStatusType as |_type|}}
+     <h1>{{_type}}</h1>
+  {{/each}}
+  {{!-- {{#if homepageTopicStatusType}} --}}
+    {{!-- {{raw "list/posts-count-column" topic=topic tagName="div"}} --}}
+  {{!-- {{else}} --}}
+    <div class="num views {{topic.viewsHeat}}">{{number topic.views numberKey="views_long"}}</div>
+  {{!-- {{/if}} --}}
+<div class="topic-last-activity">
     <a href={{topic.lastPostUrl}} title={{topic.bumpedAtTitle}}>{{format-date topic.bumpedAt format="tiny" noTitle="true"}}</a>
   </div>
 </div>
