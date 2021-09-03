@@ -1,3 +1,8 @@
+<script type="text/discourse-plugin" version="0.8">
+    const settings = Discourse.SiteSettings,
+    homepageTopicStatusType = settings.homepage_topic_status_type,
+    console.log(homepageTopicStatusType)
+</script>
 <script type="text/x-handlebars" data-template-name="javascripts/latest-topic-list-item.hbr">
 <div class="topic-poster">
     {{#user-link user=topic.lastPosterUser}}
